@@ -24,20 +24,13 @@ Isso ajuda a manter o controle sobre o progresso de projetos e tarefas, oferecen
 
 ➡️Clone o repositório
 
-➡️Crie e ative um ambiente virtual:
+➡️Construa e inicie os contêineres
 
-    python -m venv venv
-    .\venv\Scripts\activate
+    docker-compose up --build -d
 
-➡️Instale as dependências: No diretório do projeto, instale as dependências necessárias:
+➡️Acesse a aplicação
 
-    pip install -r requirements.txt
-
-➡️Execute a aplicação: Agora, execute o servidor FastAPI com o comando:
-
-    uvicorn main:app --reload
-
-💻O servidor estará disponível em http://127.0.0.1:8000.
+    http://localhost:8080
 
 Importe a Coleção para o Postman
 

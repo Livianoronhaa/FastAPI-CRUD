@@ -11,5 +11,4 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
 
-# Criando uma instância global de settings
 settings = Settings()

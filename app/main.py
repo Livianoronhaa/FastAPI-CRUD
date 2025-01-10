@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from app.Routes import projetos, tarefas, usuarios
 from app import models
+from app import database
+
 
 app = FastAPI()
 

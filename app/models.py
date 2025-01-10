@@ -3,7 +3,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()  # Mova essa linha para cá
+Base = declarative_base()
 
 class Usuario(Base):
     __tablename__ = "usuarios"

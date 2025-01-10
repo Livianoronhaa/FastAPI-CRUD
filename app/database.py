@@ -1,10 +1,11 @@
 # database.py
 from pydantic_settings import BaseSettings
+
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.models import Base  # Importação agora do models.py
+from app.models import Base
 
 class Settings(BaseSettings):
     DATABASE_PORT: int
