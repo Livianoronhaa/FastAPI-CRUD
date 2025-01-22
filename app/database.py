@@ -1,4 +1,3 @@
-# database.py
 from pydantic_settings import BaseSettings
 
 import psycopg2
@@ -62,3 +61,6 @@ def create_database_if_not_exists():
             cursor.close()
         if conn:
             conn.close()
+
+create_database_if_not_exists()
+Base.metadata.create_all(bind=engine)

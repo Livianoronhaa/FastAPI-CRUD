@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="/static/usuarios.css">
+
+
+<head>
+  <title>{{ titulo }}</title>
+</head>
+
+<body>
+  <h1>{{ titulo }}</h1>
+  <form method="post">
+    <label for="nome">Nome do Usuário:</label>
+    <input type="text" id="nome" name="nome" value="{{ usuario.nome if usuario else '' }}" required>
+    <br>
+    <button type="submit">Salvar</button>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gerenciamento</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+  <header>Sistema de Gerenciamento de Tarefas</header>
+  <div class="container">
+    <h2>Projetos</h2>
+    <a href="/projetos/novo">
+      <button>Adicionar Projeto</button>
+    </a>
+
+    <ul>
+      {% for projeto in projetos %}
+      <li>
+        <strong>{{ projeto.id }} - {{ projeto.nome }}</strong>
+        <div>
+          <a href="/projetos/{{ projeto.id }}/editar">Editar</a>
+          <a href="/projetos/{{ projeto.id }}/excluir">Excluir</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h2>Tarefas</h2>
+
+    <a href="/tarefas/novo"><button>Adicionar Tarefa</button></a>
+
+
+    <ul>
+      {% for tarefa in tarefas %}
+      <li>
+        <strong>{{ tarefa.id }} - {{ tarefa.nome }}</strong> (Projeto ID: {{ tarefa.projeto_id }})
+        <div>
+          <a href="/tarefas/{{ tarefa.id }}/editar">Editar</a>
+          <a href="/tarefas/{{ tarefa.id }}/excluir">Excluir</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h2>Usuários</h2>
+
+    <a href="/usuarios/novo"><button>Adicionar Usuário</button></a>
+
+    <ul>
+      {% for usuario in usuarios %}
+      <li>
+        <strong>{{ usuario.id }} - {{ usuario.nome }}</strong>
+        <div>
+          <a href="/usuarios/{{ usuario.id }}/editar">Editar</a>
+          <a href="/usuarios/{{ usuario.id }}/excluir">Excluir</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+
+</html>

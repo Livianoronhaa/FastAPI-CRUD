@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Adicionar/Editar Projeto</title>
+</head>
+
+<body>
+  <h1>{{ "Editar" if projeto else "Adicionar Novo" }} Projeto</h1>
+  <form action="/projetos" method="post">
+    <label for="nome">Nome do Projeto:</label>
+    <input type="text" id="nome" name="nome" value="{{ projeto.nome if projeto else '' }}">
+    <button type="submit">Salvar</button>
+  </form>
+</body>
+
+</html>

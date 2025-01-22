@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Formulário de Projeto{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="/static/projetos.css">
+
+<h2>{{ titulo }}</h2>
+<form method="post">
+    <label for="nome">Nome do Projeto:</label>
+    <input type="text" name="nome" id="nome" value="{{ projeto.nome if projeto else '' }}">
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}
